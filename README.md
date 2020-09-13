@@ -12,4 +12,3 @@ Random Forest Regressor
 
 Catagorical data is encoded using one hot encoding method and RMSE is used as an evaluation metric for regression models
 
-1048.66633
