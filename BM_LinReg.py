@@ -96,22 +96,6 @@ print(y_pred)
 # Calculating the root mean squared error
 print("RMSE :", np.sqrt(((y_test - y_pred)**2).sum()/len(y_test)))
 
-""" Random Forest Regression """
-from sklearn.ensemble import RandomForestRegressor
-
-regressor = RandomForestRegressor(n_estimators = 100 , n_jobs = -1)
-regressor.fit(X_train, y_train)
-
-# predicting the  test set results
-y_pred = regressor.predict(X_test)
-print(y_pred)
-
-# finding the mean squared error and variance
-mse = mean_squared_error(y_test, y_pred)
-print("RMSE :",np.sqrt(mse))
-print('Variance score: %.2f' % r2_score(y_test, y_pred))
-
-print("Result :",regressor.score(X_train, y_train))
 
 """  Decision Tree Regressor  """
 from sklearn.tree import DecisionTreeRegressor
